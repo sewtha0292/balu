@@ -1,7 +1,7 @@
 node
 {
     def mavenhome=tool name:'maven3.8.4',type:'maven'
-    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), githubProjectProperty(displayName: '', projectUrlStr: 'https://github.com/sewtha0292/maven-web-application.git/')])
+    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5'))])
     stage('checkout clone'){
         git credentialsId: 'ff21682a-1c49-4982-a426-f88863aa3aab', url: 'https://github.com/sewtha0292/maven-web-application.git'
     }
